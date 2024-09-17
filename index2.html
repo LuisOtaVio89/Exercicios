@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Quiz HTML CSS</title>
+</head>
+<body>
+    <header>
+        <section class="quiz-section">
+            <h1>O quanto você conhece a KitKat?</h1>
+            <img src="imagens/kit.png" alt="KitKat" class="kit-image">
+        </section>
+    </header>
+
+    <main class="quiz-form">
+        <form >
+            <section class="question">
+                <h3>Qual a data de lançamento da marca?</h3>
+                <label><input type="radio" name="q1" value="A" onclick="disableOptions('q1'); playsound()">A) 1974</label><br>
+                <label><input type="radio" name="q1" value="B" onclick="disableOptions('q1'); playsound()">B) 1935</label><br>
+                <label><input type="radio" name="q1" value="C" onclick="disableOptions('q1'); playsound()">C) 1945</label><br>
+                <label><input type="radio" name="q1" value="D" onclick="disableOptions('q1'); playsound()">D) 1987</label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>Qual nosso último produto lançado?</h3>
+                <label><input type="radio" name="q2" value="A" onclick="handleAnswer('q2', 'tablet'); playsound()">A) Tablet</label><br>
+                <label><input type="radio" name="q2" value="B" onclick="handleAnswer('q2', 'pasta'); playsound()">B) Pasta</label><br>
+                <label><input type="radio" name="q2" value="C" onclick="handleAnswer('q2', 'pops'); playsound()">C) Pops</label><br>
+                <label><input type="radio" name="q2" value="D" onclick="handleAnswer('q2', 'cereal'); playsound()">D) Cereal</label>
+                <img src="imagens/tablet.png" class="result-image" id="tablet" alt="Tablet">
+                <img src="imagens/pasta.png" class="result-image" id="pasta" alt="Pasta">
+                <img src="imagens/pops.png" class="result-image" id="pops" alt="Pops">
+                <img src="imagens/cereal.png" class="result-image" id="cereal" alt="Cereal">
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>Qual ingrediente é usado para criar a camada crocante dentro do KitKat?</h3>
+                <label><input type="radio" name="q3" value="A" onclick="disableOptions('q3'); playsound()">A) Arroz</label><br>
+                <label><input type="radio" name="q3" value="B" onclick="disableOptions('q3'); playsound()">B) Amendoim</label><br>
+                <label><input type="radio" name="q3" value="C" onclick="disableOptions('q3'); playsound()">C) Wafers</label><br>
+                <label><input type="radio" name="q3" value="D" onclick="disableOptions('q3'); playsound()">D) Caramelo</label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>Qual é o país de origem do KitKat?</h3>
+                <label><input type="radio" name="q4" value="A" onclick="disableOptions('q4'); playsound()">A) Reino Unido</label><br>
+                <label><input type="radio" name="q4" value="B" onclick="disableOptions('q4'); playsound()">B) Japão</label><br>
+                <label><input type="radio" name="q4" value="C" onclick="disableOptions('q4'); playsound()">C) Estados Unidos</label><br>
+                <label><input type="radio" name="q4" value="D" onclick="disableOptions('q4'); playsound()">D) Alemanha</label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>Qual é o nome do famoso slogan do KitKat?</h3>
+                <label><input type="radio" name="q5" value="A" onclick="disableOptions('q5'); playsound()">A) Sinta o crocante</label><br>
+                <label><input type="radio" name="q5" value="B" onclick="disableOptions('q5'); playsound()">B) Hora do KitKat</label><br>
+                <label><input type="radio" name="q5" value="C" onclick="disableOptions('q5'); playsound()">C) Dê uma pausa</label><br>
+                <label><input type="radio" name="q5" value="D" onclick="disableOptions('q5'); playsound()">D) Quebre e Sinta</label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>Qual é o tamanho padrão do KitKat na embalagem tradicional?</h3>
+                <label><input type="radio" name="q6" value="A" onclick="disableOptions('q6'); playsound()">A) 1 barra</label><br>
+                <label><input type="radio" name="q6" value="B" onclick="disableOptions('q6'); playsound()">B) 2 barras</label><br>
+                <label><input type="radio" name="q6" value="C" onclick="disableOptions('q6'); playsound()">C) 4 barras</label><br>
+                <label><input type="radio" name="q6" value="D" onclick="disableOptions('q6'); playsound()">D) 6 barras </label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>O KitKat é produzido pela qual grande empresa de alimentos?</h3>
+                <label><input type="radio" name="q7" value="A" onclick="disableOptions('q7'); playsound()">A) Nestlé</label><br>
+                <label><input type="radio" name="q7" value="B" onclick="disableOptions('q7'); playsound()">B) Mars</label><br>
+                <label><input type="radio" name="q7" value="C" onclick="disableOptions('q7'); playsound()">C) Lacta</label><br>
+                <label><input type="radio" name="q7" value="D" onclick="disableOptions('q7'); playsound()">D) Mondelez</label>
+            </section>
+            <button type="button" onclick="SubmitQuiz()">Enviar resposta</button>
+            <h2 class="segundo"></h2>
+        
+            <button class="button1" id="resetbutton" type="button" onclick="resetQuiz()" disabled>Tentar novamente</button>
+        </form>
+        <audio id="venceusom" src="som/venceu.mp3" preload="auto"></audio>
+        <audio id="selecionasom" src="som/seleciona.mp3" preload="auto"></audio>
+        <audio id="perdeuSom" src="som/perdeu.mp3" preload="auto"></audio>
+
+        <section id="result"></section>
+    </main>
+
+    <footer>@KitKat</footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
+
